@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Big Zone Barber | Lublin</title>
+<title>Big Zone Barber Lublin</title>
 
 <style>
 
@@ -16,24 +16,29 @@ box-sizing:border-box;
 scroll-behavior:smooth;
 }
 
+
 body{
-background:#080808;
+background:#070707;
 color:white;
 font-family:Arial,Helvetica,sans-serif;
 }
 
 
+
+/* MENU */
+
 nav{
 
 position:fixed;
 top:0;
+left:0;
 width:100%;
-z-index:99;
+padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 8%;
-background:rgba(0,0,0,.9);
+background:#050505;
+z-index:10;
 
 }
 
@@ -50,15 +55,14 @@ color:#d4af37;
 .logo span{
 
 display:block;
-font-size:13px;
+font-size:12px;
 letter-spacing:8px;
 text-align:center;
 
 }
 
 
-
-nav a{
+.menu a{
 
 color:white;
 text-decoration:none;
@@ -68,41 +72,71 @@ margin-left:25px;
 
 
 
+
+/* GŁÓWNA SEKCJA */
+
+
 .hero{
 
-height:100vh;
-
-background:
-linear-gradient(
-rgba(0,0,0,.55),
-rgba(0,0,0,.95)
-),
-url("barber.jpg");
-
-background-size:cover;
-background-position:center;
+min-height:100vh;
 
 display:flex;
+
 align-items:center;
-padding:10%;
+
+justify-content:space-between;
+
+gap:50px;
+
+padding:120px 8% 60px;
+
+background:#070707;
 
 }
 
 
-.hero h1{
 
-font-size:75px;
+.hero-left{
+
+width:50%;
+
+}
+
+
+
+.hero-left h1{
+
+font-size:80px;
+
+line-height:1;
+
 color:#d4af37;
-text-transform:uppercase;
+
+font-weight:900;
 
 }
 
 
-.hero p{
 
-font-size:22px;
-max-width:600px;
+.hero-left h2{
+
+font-size:45px;
+
+margin-top:30px;
+
+}
+
+
+
+.hero-left p{
+
+font-size:20px;
+
+color:#ccc;
+
 margin:30px 0;
+
+line-height:1.5;
 
 }
 
@@ -110,21 +144,58 @@ margin:30px 0;
 
 .btn{
 
-background:#d4af37;
-color:#000;
-padding:16px 35px;
-border-radius:40px;
-text-decoration:none;
-font-weight:bold;
 display:inline-block;
+
+background:#d4af37;
+
+color:#000;
+
+padding:16px 35px;
+
+border-radius:40px;
+
+font-weight:bold;
+
+text-decoration:none;
 
 }
 
 
 
+.hero-right{
+
+width:50%;
+
+}
+
+
+
+.hero-right img{
+
+width:100%;
+
+height:550px;
+
+object-fit:cover;
+
+border-radius:30px;
+
+border:3px solid #d4af37;
+
+box-shadow:0 0 40px #d4af3744;
+
+}
+
+
+
+
+/* SEKCJE */
+
+
 section{
 
-padding:90px 10%;
+padding:90px 8%;
+
 text-align:center;
 
 }
@@ -134,17 +205,24 @@ text-align:center;
 .title{
 
 font-size:45px;
+
 color:#d4af37;
+
 margin-bottom:50px;
 
 }
 
 
 
+/* CENNIK */
+
+
 .cards{
 
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
 gap:30px;
 
 }
@@ -154,18 +232,12 @@ gap:30px;
 .card{
 
 background:#151515;
-border:1px solid #333;
-border-radius:20px;
+
 padding:35px;
-transition:.3s;
 
-}
+border-radius:20px;
 
-
-.card:hover{
-
-transform:translateY(-10px);
-border-color:#d4af37;
+border:1px solid #333;
 
 }
 
@@ -174,48 +246,42 @@ border-color:#d4af37;
 .card h3{
 
 color:#d4af37;
+
 font-size:25px;
 
 }
 
 
+
+.card p{
+
+margin:20px 0;
+
+color:#ccc;
+
+}
+
+
+
 .price{
 
 font-size:35px;
-margin-top:20px;
+
 font-weight:bold;
 
 }
 
 
 
-
-.gallery{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-
-}
-
-
-
-.gallery img{
-
-width:100%;
-height:250px;
-object-fit:cover;
-border-radius:20px;
-
-}
-
-
+/* O NAS */
 
 
 .about{
 
 background:#111;
+
 font-size:20px;
+
 line-height:2;
 
 }
@@ -223,10 +289,15 @@ line-height:2;
 
 
 
+/* OPINIE */
+
+
 .review{
 
 background:#151515;
+
 padding:30px;
+
 border-radius:20px;
 
 }
@@ -236,87 +307,125 @@ border-radius:20px;
 .stars{
 
 color:#d4af37;
+
 font-size:25px;
 
 }
 
 
 
-
-.contact{
-
-background:#111;
-
-}
-
-
-.location{
-
-font-size:80px;
-
-}
+/* KONTAKT */
 
 
 .contact-box{
 
-max-width:600px;
-margin:auto;
 background:#151515;
+
 padding:40px;
+
 border-radius:25px;
 
+max-width:600px;
+
+margin:auto;
+
 }
+
+
+
+.icon{
+
+font-size:70px;
+
+}
+
 
 
 .contact-box h3{
 
 color:#d4af37;
+
 font-size:30px;
 
-}
-
-
-.map{
-
-margin-top:40px;
-width:100%;
-height:350px;
-border:0;
-border-radius:20px;
+margin:20px;
 
 }
 
+
+.contact-box p{
+
+font-size:18px;
+
+line-height:2;
+
+}
+
+
+
+/* STOPKA */
 
 
 footer{
 
-background:black;
+background:#000;
+
 padding:30px;
+
 text-align:center;
+
 color:#777;
 
 }
 
 
 
-@media(max-width:700px){
+/* TELEFON */
 
-.hero h1{
 
-font-size:45px;
+@media(max-width:800px){
+
+
+.hero{
+
+flex-direction:column;
 
 }
 
-nav .menu{
+
+.hero-left,
+.hero-right{
+
+width:100%;
+
+}
+
+
+.hero-left h1{
+
+font-size:50px;
+
+}
+
+
+.hero-right img{
+
+height:350px;
+
+}
+
+
+.menu{
 
 display:none;
 
 }
 
+
 }
 
-</style>
 
+
+</style>
 
 </head>
 
@@ -324,53 +433,98 @@ display:none;
 <body>
 
 
+
 <nav>
 
 <div class="logo">
+
 BIG ZONE
+
 <span>BARBER</span>
+
 </div>
 
 
 <div class="menu">
 
 <a href="#cennik">Cennik</a>
+
 <a href="#opinie">Opinie</a>
+
 <a href="#kontakt">Kontakt</a>
 
 </div>
+
 
 </nav>
 
 
 
 
-<section class="hero">
+
+<!-- START -->
 
 
-<div>
+<div class="hero">
+
+
+<div class="hero-left">
+
 
 <h1>
-Twój styl.<br>
-Twoja strefa.
+
+BIG ZONE
+
+<br>
+
+BARBER
+
 </h1>
 
 
+
+<h2>
+
+Twój styl.<br>
+
+Twoja strefa.
+
+</h2>
+
+
+
 <p>
+
 Profesjonalny barber w Lublinie.
-Precyzyjne cięcia, broda i męski charakter.
+<br>
+Strzyżenie, broda i męski styl.
+
 </p>
 
 
+
 <a class="btn" href="tel:534049124">
-📞 ZAREZERWUJ
+
+📞 UMÓW WIZYTĘ
+
 </a>
 
 
 </div>
 
 
-</section>
+
+<div class="hero-right">
+
+
+<img src="salon.jpg" alt="Big Zone Barber Lublin">
+
+
+</div>
+
+
+</div>
+
 
 
 
@@ -381,8 +535,11 @@ Precyzyjne cięcia, broda i męski charakter.
 
 
 <h2 class="title">
+
 CENNIK
+
 </h2>
+
 
 
 <div class="cards">
@@ -390,46 +547,73 @@ CENNIK
 
 <div class="card">
 
-<h3>✂ STRZYŻENIE</h3>
+<h3>
+
+✂ STRZYŻENIE
+
+</h3>
 
 <p>
+
 Profesjonalne strzyżenie włosów
+
 </p>
 
 <div class="price">
+
 90 zł
+
 </div>
 
 </div>
+
 
 
 
 <div class="card">
 
-<h3>🧔 BRODA</h3>
+<h3>
+
+🧔 BRODA
+
+</h3>
 
 <p>
-Strzyżenie brody z pielęgnacją
+
+Modelowanie brody + pielęgnacja
+
 </p>
 
 <div class="price">
+
 80 zł
+
 </div>
 
 </div>
+
+
 
 
 
 <div class="card">
 
-<h3>🔥 COMBO</h3>
+<h3>
+
+🔥 COMBO
+
+</h3>
 
 <p>
+
 Włosy + broda
+
 </p>
 
 <div class="price">
+
 130 zł
+
 </div>
 
 </div>
@@ -438,23 +622,33 @@ Włosy + broda
 
 <div class="card">
 
-<h3>👑 SPA</h3>
+<h3>
+
+👑 SPA
+
+</h3>
 
 <p>
-Pełny relaks i pielęgnacja
+
+Pełna pielęgnacja
+
 </p>
 
 <div class="price">
+
 190 zł
+
 </div>
 
 </div>
+
 
 
 </div>
 
 
 </section>
+
 
 
 
@@ -465,22 +659,29 @@ Pełny relaks i pielęgnacja
 
 
 <h2 class="title">
+
 DLACZEGO MY?
+
 </h2>
 
 
 <p>
 
-🔥 Doświadczenie<br>
 🔥 Profesjonalne podejście<br>
-🔥 Najwyższa jakość usług<br>
+
+🔥 Doświadczenie<br>
+
+🔥 Najlepsze kosmetyki<br>
+
 🔥 Męski klimat<br>
-🔥 Perfekcyjny detal
+
+🔥 Dbałość o każdy szczegół
 
 </p>
 
 
 </section>
+
 
 
 
@@ -491,8 +692,11 @@ DLACZEGO MY?
 
 
 <h2 class="title">
+
 OPINIE
+
 </h2>
+
 
 
 <div class="cards">
@@ -501,36 +705,46 @@ OPINIE
 <div class="review">
 
 <div class="stars">
+
 ★★★★★
-</div>
-
-"Mój barber od wielu lat. Profesjonalista."
 
 </div>
+
+Mój barber od wielu lat. Profesjonalista.
+
+</div>
+
 
 
 
 <div class="review">
 
 <div class="stars">
+
 ★★★★★
-</div>
-
-"Strzyżenie na najwyższym poziomie."
 
 </div>
+
+Strzyżenie na najwyższym poziomie.
+
+</div>
+
+
 
 
 
 <div class="review">
 
 <div class="stars">
+
 ★★★★★
-</div>
-
-"Polecam każdemu."
 
 </div>
+
+Super obsługa i świetny efekt.
+
+</div>
+
 
 
 </div>
@@ -544,38 +758,50 @@ OPINIE
 
 
 
-<section id="kontakt" class="contact">
+<section id="kontakt">
 
 
 <h2 class="title">
+
 KONTAKT
+
 </h2>
+
 
 
 <div class="contact-box">
 
 
-<div class="location">
+<div class="icon">
+
 📍
+
 </div>
 
 
+
 <h3>
+
 BIG ZONE BARBER
+
 </h3>
 
 
 <p>
 
 Niccolo Paganiniego 10A<br>
+
 20-850 Lublin
 
 </p>
 
 
 <p>
+
 📞 534 049 124
+
 </p>
+
 
 
 <a class="btn"
@@ -584,23 +810,17 @@ href="https://www.google.com/maps/search/?api=1&query=Big+Zone+Barber+Niccolo+Pa
 
 target="_blank">
 
-OTWÓRZ MAPĘ
+🗺 DOJAZD
 
 </a>
 
-
-
-<iframe class="map"
-
-src="https://maps.google.com/maps?q=Niccolo%20Paganiniego%2010A%20Lublin&t=&z=15&ie=UTF8&iwloc=&output=embed">
-
-</iframe>
 
 
 </div>
 
 
 </section>
+
 
 
 
@@ -614,4 +834,5 @@ src="https://maps.google.com/maps?q=Niccolo%20Paganiniego%2010A%20Lublin&t=&z=15
 
 
 </body>
+
 </html>
