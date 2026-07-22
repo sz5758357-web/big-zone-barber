@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Big Zone Barber Lublin</title>
+<title>BIG ZONE BARBER | Lublin</title>
+
 
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Poppins:wght@300;400;600;800&display=swap');
+
 
 *{
 margin:0;
@@ -18,36 +23,53 @@ scroll-behavior:smooth;
 
 
 body{
-background:#070707;
+
+background:#050505;
 color:white;
-font-family:Arial,Helvetica,sans-serif;
+font-family:Poppins,sans-serif;
+
+}
+
+
+
+body:before{
+
+content:"";
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at top,#d4af3722,transparent 40%);
+pointer-events:none;
+
 }
 
 
 
 /* MENU */
 
+
 nav{
 
 position:fixed;
 top:0;
-left:0;
 width:100%;
-padding:20px 8%;
+padding:25px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:#050505;
-z-index:10;
+background:#050505dd;
+backdrop-filter:blur(15px);
+z-index:100;
 
 }
 
 
 .logo{
 
-font-size:35px;
-font-weight:900;
+font-family:Cinzel;
+font-size:38px;
 color:#d4af37;
+letter-spacing:3px;
 
 }
 
@@ -56,24 +78,33 @@ color:#d4af37;
 
 display:block;
 font-size:12px;
-letter-spacing:8px;
+letter-spacing:12px;
 text-align:center;
 
 }
 
 
-.menu a{
+nav a{
 
 color:white;
 text-decoration:none;
-margin-left:25px;
+margin-left:30px;
+font-weight:600;
+
+}
+
+
+nav a:hover{
+
+color:#d4af37;
 
 }
 
 
 
 
-/* GŁÓWNA SEKCJA */
+
+/* HERO */
 
 
 .hero{
@@ -81,62 +112,49 @@ margin-left:25px;
 min-height:100vh;
 
 display:flex;
-
 align-items:center;
-
 justify-content:space-between;
 
-gap:50px;
+padding:130px 8% 60px;
 
-padding:120px 8% 60px;
-
-background:#070707;
+gap:60px;
 
 }
 
 
 
-.hero-left{
+.hero-text{
 
 width:50%;
 
 }
 
 
+.hero-text h1{
 
-.hero-left h1{
-
-font-size:80px;
-
+font-family:Cinzel;
+font-size:85px;
 line-height:1;
-
 color:#d4af37;
-
-font-weight:900;
 
 }
 
 
 
-.hero-left h2{
+.hero-text h2{
 
 font-size:45px;
-
 margin-top:30px;
 
 }
 
 
 
-.hero-left p{
-
-font-size:20px;
+.hero-text p{
 
 color:#ccc;
-
+font-size:20px;
 margin:30px 0;
-
-line-height:1.5;
 
 }
 
@@ -146,23 +164,33 @@ line-height:1.5;
 
 display:inline-block;
 
+padding:18px 45px;
+
 background:#d4af37;
 
-color:#000;
+color:black;
 
-padding:16px 35px;
-
-border-radius:40px;
-
-font-weight:bold;
+border-radius:50px;
 
 text-decoration:none;
+
+font-weight:800;
+
+transition:.3s;
+
+}
+
+
+.btn:hover{
+
+transform:scale(1.08);
 
 }
 
 
 
-.hero-right{
+
+.hero-image{
 
 width:50%;
 
@@ -170,21 +198,23 @@ width:50%;
 
 
 
-.hero-right img{
+.hero-image img{
 
 width:100%;
-
-height:550px;
-
+height:600px;
 object-fit:cover;
 
 border-radius:30px;
 
-border:3px solid #d4af37;
+border:2px solid #d4af37;
 
-box-shadow:0 0 40px #d4af3744;
+box-shadow:
+0 0 60px #d4af3744;
 
 }
+
+
+
 
 
 
@@ -194,8 +224,7 @@ box-shadow:0 0 40px #d4af3744;
 
 section{
 
-padding:90px 8%;
-
+padding:100px 8%;
 text-align:center;
 
 }
@@ -204,60 +233,60 @@ text-align:center;
 
 .title{
 
-font-size:45px;
-
+font-family:Cinzel;
+font-size:50px;
 color:#d4af37;
-
-margin-bottom:50px;
+margin-bottom:60px;
 
 }
 
 
 
-/* CENNIK */
+/* USŁUGI */
 
 
-.cards{
+.grid{
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:
+repeat(auto-fit,minmax(260px,1fr));
 
 gap:30px;
 
 }
 
 
+.box{
 
-.card{
+background:
+linear-gradient(145deg,#171717,#0b0b0b);
 
-background:#151515;
+padding:40px;
 
-padding:35px;
-
-border-radius:20px;
+border-radius:25px;
 
 border:1px solid #333;
 
+transition:.4s;
+
+}
+
+
+.box:hover{
+
+transform:translateY(-15px);
+
+border-color:#d4af37;
+
 }
 
 
 
-.card h3{
+.box h3{
 
 color:#d4af37;
-
 font-size:25px;
-
-}
-
-
-
-.card p{
-
-margin:20px 0;
-
-color:#ccc;
 
 }
 
@@ -267,9 +296,13 @@ color:#ccc;
 
 font-size:35px;
 
-font-weight:bold;
+font-weight:800;
+
+margin-top:20px;
 
 }
+
+
 
 
 
@@ -278,13 +311,54 @@ font-weight:bold;
 
 .about{
 
-background:#111;
+background:#101010;
 
-font-size:20px;
+}
+
+
+
+.about p{
+
+max-width:800px;
+
+margin:auto;
+
+font-size:21px;
 
 line-height:2;
 
+color:#ddd;
+
 }
+
+
+
+
+
+/* GALERIA */
+
+
+.gallery img{
+
+width:100%;
+height:300px;
+
+object-fit:cover;
+
+border-radius:25px;
+
+transition:.4s;
+
+}
+
+
+
+.gallery img:hover{
+
+transform:scale(1.05);
+
+}
+
 
 
 
@@ -296,82 +370,93 @@ line-height:2;
 
 background:#151515;
 
-padding:30px;
+padding:35px;
 
-border-radius:20px;
+border-radius:25px;
 
 }
-
 
 
 .stars{
 
 color:#d4af37;
-
 font-size:25px;
 
 }
 
 
 
+
+
 /* KONTAKT */
 
 
-.contact-box{
+.contact{
 
-background:#151515;
+background:#101010;
 
-padding:40px;
+}
 
-border-radius:25px;
+
+
+.contact-card{
 
 max-width:600px;
 
 margin:auto;
 
+padding:50px;
+
+background:#151515;
+
+border-radius:30px;
+
+border:1px solid #333;
+
 }
 
 
 
-.icon{
+.pin{
 
-font-size:70px;
+font-size:80px;
 
 }
 
 
 
-.contact-box h3{
+.contact-card h3{
+
+font-size:32px;
 
 color:#d4af37;
 
-font-size:30px;
-
-margin:20px;
-
 }
 
 
-.contact-box p{
 
-font-size:18px;
+.contact-card p{
+
+font-size:20px;
 
 line-height:2;
 
+margin:25px;
+
 }
 
 
 
-/* STOPKA */
+
 
 
 footer{
 
-background:#000;
-
-padding:30px;
+padding:40px;
 
 text-align:center;
+
+background:#000;
 
 color:#777;
 
@@ -379,10 +464,11 @@ color:#777;
 
 
 
-/* TELEFON */
 
 
-@media(max-width:800px){
+
+
+@media(max-width:900px){
 
 
 .hero{
@@ -392,29 +478,29 @@ flex-direction:column;
 }
 
 
-.hero-left,
-.hero-right{
+.hero-text,
+.hero-image{
 
 width:100%;
 
 }
 
 
-.hero-left h1{
+.hero-text h1{
 
-font-size:50px;
-
-}
-
-
-.hero-right img{
-
-height:350px;
+font-size:55px;
 
 }
 
 
-.menu{
+.hero-image img{
+
+height:400px;
+
+}
+
+
+nav .links{
 
 display:none;
 
@@ -423,18 +509,20 @@ display:none;
 
 }
 
-
-
 </style>
 
+
 </head>
+
 
 
 <body>
 
 
 
+
 <nav>
+
 
 <div class="logo">
 
@@ -445,11 +533,12 @@ BIG ZONE
 </div>
 
 
-<div class="menu">
 
-<a href="#cennik">Cennik</a>
+<div class="links">
 
-<a href="#opinie">Opinie</a>
+<a href="#uslugi">Usługi</a>
+
+<a href="#galeria">Galeria</a>
 
 <a href="#kontakt">Kontakt</a>
 
@@ -462,13 +551,11 @@ BIG ZONE
 
 
 
-<!-- START -->
+
+<section class="hero">
 
 
-<div class="hero">
-
-
-<div class="hero-left">
+<div class="hero-text">
 
 
 <h1>
@@ -486,7 +573,6 @@ BARBER
 <h2>
 
 Twój styl.<br>
-
 Twoja strefa.
 
 </h2>
@@ -496,8 +582,7 @@ Twoja strefa.
 <p>
 
 Profesjonalny barber w Lublinie.
-<br>
-Strzyżenie, broda i męski styl.
+Perfekcyjne cięcie, broda i męski charakter.
 
 </p>
 
@@ -514,24 +599,25 @@ Strzyżenie, broda i męski styl.
 
 
 
-<div class="hero-right">
 
 
-<img src="salon.jpg" alt="Big Zone Barber Lublin">
+<div class="hero-image">
 
-
-</div>
-
+<img src="img/salon.jpg">
 
 </div>
 
 
 
+</section>
 
 
 
 
-<section id="cennik">
+
+
+
+<section id="uslugi">
 
 
 <h2 class="title">
@@ -542,20 +628,17 @@ CENNIK
 
 
 
-<div class="cards">
+<div class="grid">
 
 
-<div class="card">
 
-<h3>
+<div class="box">
 
-✂ STRZYŻENIE
-
-</h3>
+<h3>✂ Strzyżenie</h3>
 
 <p>
 
-Profesjonalne strzyżenie włosów
+Profesjonalne cięcie
 
 </p>
 
@@ -570,17 +653,14 @@ Profesjonalne strzyżenie włosów
 
 
 
-<div class="card">
 
-<h3>
+<div class="box">
 
-🧔 BRODA
-
-</h3>
+<h3>🧔 Broda</h3>
 
 <p>
 
-Modelowanie brody + pielęgnacja
+Modelowanie + pielęgnacja
 
 </p>
 
@@ -596,13 +676,9 @@ Modelowanie brody + pielęgnacja
 
 
 
-<div class="card">
+<div class="box">
 
-<h3>
-
-🔥 COMBO
-
-</h3>
+<h3>🔥 Combo</h3>
 
 <p>
 
@@ -620,17 +696,15 @@ Włosy + broda
 
 
 
-<div class="card">
 
-<h3>
 
-👑 SPA
+<div class="box">
 
-</h3>
+<h3>👑 SPA</h3>
 
 <p>
 
-Pełna pielęgnacja
+Pełny relaks
 
 </p>
 
@@ -646,7 +720,6 @@ Pełna pielęgnacja
 
 </div>
 
-
 </section>
 
 
@@ -660,22 +733,21 @@ Pełna pielęgnacja
 
 <h2 class="title">
 
-DLACZEGO MY?
+O NAS
 
 </h2>
 
 
 <p>
 
-🔥 Profesjonalne podejście<br>
+BIG ZONE BARBER to miejsce stworzone dla mężczyzn,
+którzy cenią styl, jakość i perfekcyjny wygląd.
 
+<br><br>
+
+🔥 Profesjonalizm<br>
 🔥 Doświadczenie<br>
-
-🔥 Najlepsze kosmetyki<br>
-
-🔥 Męski klimat<br>
-
-🔥 Dbałość o każdy szczegół
+🔥 Najwyższa jakość usług
 
 </p>
 
@@ -688,7 +760,40 @@ DLACZEGO MY?
 
 
 
-<section id="opinie">
+
+<section id="galeria">
+
+
+<h2 class="title">
+
+GALERIA
+
+</h2>
+
+
+<div class="grid gallery">
+
+
+<img src="img/fryzura1.jpg">
+
+<img src="img/fryzura2.jpg">
+
+<img src="img/fryzura3.jpg">
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section>
 
 
 <h2 class="title">
@@ -698,8 +803,7 @@ OPINIE
 </h2>
 
 
-
-<div class="cards">
+<div class="grid">
 
 
 <div class="review">
@@ -716,6 +820,19 @@ Mój barber od wielu lat. Profesjonalista.
 
 
 
+<div class="review">
+
+<div class="stars">
+
+★★★★★
+
+</div>
+
+Świetna obsługa i idealne strzyżenie.
+
+</div>
+
+
 
 <div class="review">
 
@@ -725,23 +842,7 @@ Mój barber od wielu lat. Profesjonalista.
 
 </div>
 
-Strzyżenie na najwyższym poziomie.
-
-</div>
-
-
-
-
-
-<div class="review">
-
-<div class="stars">
-
-★★★★★
-
-</div>
-
-Super obsługa i świetny efekt.
+Najwyższy poziom usług.
 
 </div>
 
@@ -758,7 +859,7 @@ Super obsługa i świetny efekt.
 
 
 
-<section id="kontakt">
+<section id="kontakt" class="contact">
 
 
 <h2 class="title">
@@ -769,10 +870,10 @@ KONTAKT
 
 
 
-<div class="contact-box">
+<div class="contact-card">
 
 
-<div class="icon">
+<div class="pin">
 
 📍
 
@@ -787,16 +888,14 @@ BIG ZONE BARBER
 </h3>
 
 
+
 <p>
 
 Niccolo Paganiniego 10A<br>
 
 20-850 Lublin
 
-</p>
-
-
-<p>
+<br><br>
 
 📞 534 049 124
 
@@ -804,13 +903,12 @@ Niccolo Paganiniego 10A<br>
 
 
 
+
 <a class="btn"
 
-href="https://www.google.com/maps/search/?api=1&query=Big+Zone+Barber+Niccolo+Paganiniego+10A+Lublin"
+href="https://www.google.com/maps/search/?api=1&query=Big+Zone+Barber+Niccolo+Paganiniego+10A+Lublin">
 
-target="_blank">
-
-🗺 DOJAZD
+MAPA DOJAZDU
 
 </a>
 
@@ -825,11 +923,13 @@ target="_blank">
 
 
 
+
 <footer>
 
-© 2026 Big Zone Barber Lublin
+© 2026 BIG ZONE BARBER LUBLIN
 
 </footer>
+
 
 
 
