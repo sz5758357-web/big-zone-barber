@@ -1,7 +1,9 @@
 *{
+
 margin:0;
 padding:0;
 box-sizing:border-box;
+
 }
 
 
@@ -23,7 +25,7 @@ width:100%;
 padding:20px 8%;
 display:flex;
 justify-content:space-between;
-background:#050505cc;
+background:#000;
 z-index:10;
 
 }
@@ -42,7 +44,7 @@ color:#d4af37;
 .logo span{
 
 display:block;
-font-size:15px;
+font-size:14px;
 letter-spacing:8px;
 
 }
@@ -53,7 +55,7 @@ letter-spacing:8px;
 
 color:white;
 text-decoration:none;
-margin-left:30px;
+margin-left:25px;
 
 }
 
@@ -68,7 +70,7 @@ background:
 
 linear-gradient(
 rgba(0,0,0,.7),
-rgba(0,0,0,.95)
+rgba(0,0,0,.9)
 ),
 
 url("barber.jpg");
@@ -83,16 +85,15 @@ align-items:center;
 
 padding:10%;
 
+
 }
 
 
 
 .hero h1{
 
-font-size:70px;
-
 font-family:Cinzel;
-
+font-size:70px;
 color:#d4af37;
 
 }
@@ -101,38 +102,33 @@ color:#d4af37;
 
 .hero p{
 
-max-width:500px;
-
 font-size:20px;
-
+max-width:600px;
 margin:25px 0;
 
 }
 
 
 
+
 .button{
 
+display:inline-block;
 background:#d4af37;
-
 color:black;
-
 padding:15px 35px;
-
 border-radius:40px;
-
 text-decoration:none;
-
 font-weight:bold;
 
 }
 
 
 
+
 section{
 
 padding:90px 10%;
-
 text-align:center;
 
 }
@@ -142,14 +138,12 @@ text-align:center;
 h2{
 
 font-family:Cinzel;
-
+font-size:42px;
 color:#d4af37;
-
-font-size:40px;
-
 margin-bottom:50px;
 
 }
+
 
 
 
@@ -157,71 +151,96 @@ margin-bottom:50px;
 .reviews{
 
 display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(250px,1fr));
-
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
 
 }
 
 
 
+
 .card,
-.reviews div{
+.reviews div,
+.contact-box{
 
 background:#151515;
-
 padding:35px;
-
 border-radius:20px;
-
 border:1px solid #333;
 
 }
 
 
 
+
 .card h3{
 
 color:#d4af37;
+margin-bottom:15px;
 
 }
 
 
 
-.card b{
+
+.card strong{
 
 display:block;
-
+font-size:25px;
 margin-top:20px;
 
-font-size:25px;
-
 }
+
 
 
 
 .about{
 
 background:#111;
-
 line-height:2;
-
 font-size:20px;
 
 }
 
 
 
+
+.location-icon{
+
+font-size:70px;
+margin-bottom:20px;
+
+}
+
+
+
+
+.contact-box h3{
+
+color:#d4af37;
+font-size:28px;
+
+}
+
+
+
+
+.contact-box p{
+
+font-size:18px;
+line-height:2;
+margin:20px;
+
+}
+
+
+
+
 footer{
 
 padding:30px;
-
-background:black;
-
+background:#000;
 text-align:center;
-
 color:#777;
 
 }
@@ -235,6 +254,7 @@ color:#777;
 font-size:45px;
 
 }
+
 
 .menu{
 
