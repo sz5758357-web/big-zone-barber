@@ -13,45 +13,59 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body{
 background:#080808;
 color:white;
-font-family:Arial, sans-serif;
+font-family:Arial,Helvetica,sans-serif;
 }
 
+
 nav{
+
 position:fixed;
 top:0;
-left:0;
 width:100%;
-padding:20px 8%;
+z-index:99;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:#050505;
-z-index:100;
+padding:20px 8%;
+background:rgba(0,0,0,.9);
+
 }
 
+
 .logo{
+
 font-size:35px;
 font-weight:900;
 color:#d4af37;
+
 }
+
 
 .logo span{
+
 display:block;
 font-size:13px;
-letter-spacing:7px;
+letter-spacing:8px;
 text-align:center;
+
 }
 
-.menu a{
+
+
+nav a{
+
 color:white;
 text-decoration:none;
 margin-left:25px;
+
 }
+
 
 
 .hero{
@@ -60,8 +74,8 @@ height:100vh;
 
 background:
 linear-gradient(
-rgba(0,0,0,.7),
-rgba(0,0,0,.9)
+rgba(0,0,0,.55),
+rgba(0,0,0,.95)
 ),
 url("barber.jpg");
 
@@ -77,31 +91,32 @@ padding:10%;
 
 .hero h1{
 
-font-size:70px;
+font-size:75px;
 color:#d4af37;
+text-transform:uppercase;
 
 }
 
 
 .hero p{
 
-font-size:20px;
+font-size:22px;
 max-width:600px;
-margin:25px 0;
+margin:30px 0;
 
 }
 
 
 
-.button{
+.btn{
 
-display:inline-block;
-padding:15px 35px;
 background:#d4af37;
-color:black;
+color:#000;
+padding:16px 35px;
 border-radius:40px;
 text-decoration:none;
 font-weight:bold;
+display:inline-block;
 
 }
 
@@ -109,17 +124,18 @@ font-weight:bold;
 
 section{
 
-padding:80px 10%;
+padding:90px 10%;
 text-align:center;
 
 }
 
 
-h2{
 
-font-size:40px;
+.title{
+
+font-size:45px;
 color:#d4af37;
-margin-bottom:40px;
+margin-bottom:50px;
 
 }
 
@@ -128,103 +144,145 @@ margin-bottom:40px;
 .cards{
 
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
 
 }
+
 
 
 .card{
 
-background:#161616;
-padding:30px;
-border-radius:20px;
+background:#151515;
 border:1px solid #333;
+border-radius:20px;
+padding:35px;
+transition:.3s;
 
 }
+
+
+.card:hover{
+
+transform:translateY(-10px);
+border-color:#d4af37;
+
+}
+
 
 
 .card h3{
 
 color:#d4af37;
-margin-bottom:15px;
+font-size:25px;
 
 }
 
 
-.card strong{
+.price{
 
-display:block;
+font-size:35px;
 margin-top:20px;
+font-weight:bold;
+
+}
+
+
+
+
+.gallery{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+
+}
+
+
+
+.gallery img{
+
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:20px;
+
+}
+
+
+
+
+.about{
+
+background:#111;
+font-size:20px;
+line-height:2;
+
+}
+
+
+
+
+.review{
+
+background:#151515;
+padding:30px;
+border-radius:20px;
+
+}
+
+
+
+.stars{
+
+color:#d4af37;
 font-size:25px;
 
 }
 
 
 
-.opinie{
 
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-
-}
-
-
-.opinia{
-
-background:#161616;
-padding:30px;
-border-radius:20px;
-
-}
-
-
-
-.kontakt{
+.contact{
 
 background:#111;
 
 }
 
 
+.location{
 
-.icon{
-
-font-size:70px;
-margin-bottom:20px;
+font-size:80px;
 
 }
 
 
+.contact-box{
 
-.kontakt-box{
-
-max-width:500px;
+max-width:600px;
 margin:auto;
-background:#161616;
+background:#151515;
 padding:40px;
-border-radius:20px;
-border:1px solid #333;
+border-radius:25px;
 
 }
 
 
-
-.kontakt-box h3{
+.contact-box h3{
 
 color:#d4af37;
-font-size:28px;
+font-size:30px;
 
 }
 
 
+.map{
 
-.kontakt-box p{
-
-line-height:2;
-font-size:18px;
-margin:20px;
+margin-top:40px;
+width:100%;
+height:350px;
+border:0;
+border-radius:20px;
 
 }
 
@@ -232,8 +290,8 @@ margin:20px;
 
 footer{
 
-background:#000;
-padding:25px;
+background:black;
+padding:30px;
 text-align:center;
 color:#777;
 
@@ -249,7 +307,7 @@ font-size:45px;
 
 }
 
-.menu{
+nav .menu{
 
 display:none;
 
@@ -276,7 +334,7 @@ BIG ZONE
 
 <div class="menu">
 
-<a href="#uslugi">Usługi</a>
+<a href="#cennik">Cennik</a>
 <a href="#opinie">Opinie</a>
 <a href="#kontakt">Kontakt</a>
 
@@ -287,40 +345,44 @@ BIG ZONE
 
 
 
-<div class="hero">
+<section class="hero">
 
 
 <div>
 
 <h1>
-TWÓJ STYL.<br>
-TWOJA STREFA.
+Twój styl.<br>
+Twoja strefa.
 </h1>
 
 
 <p>
 Profesjonalny barber w Lublinie.
-Strzyżenie, broda i męski styl na najwyższym poziomie.
+Precyzyjne cięcia, broda i męski charakter.
 </p>
 
 
-<a class="button" href="tel:534049124">
-📞 UMÓW WIZYTĘ
+<a class="btn" href="tel:534049124">
+📞 ZAREZERWUJ
 </a>
 
 
 </div>
 
 
-</div>
+</section>
 
 
 
 
 
-<section id="uslugi">
 
-<h2>USŁUGI</h2>
+<section id="cennik">
+
+
+<h2 class="title">
+CENNIK
+</h2>
 
 
 <div class="cards">
@@ -331,10 +393,12 @@ Strzyżenie, broda i męski styl na najwyższym poziomie.
 <h3>✂ STRZYŻENIE</h3>
 
 <p>
-Profesjonalne męskie cięcie.
+Profesjonalne strzyżenie włosów
 </p>
 
-<strong>90 zł</strong>
+<div class="price">
+90 zł
+</div>
 
 </div>
 
@@ -345,10 +409,12 @@ Profesjonalne męskie cięcie.
 <h3>🧔 BRODA</h3>
 
 <p>
-Modelowanie i pielęgnacja.
+Strzyżenie brody z pielęgnacją
 </p>
 
-<strong>80 zł</strong>
+<div class="price">
+80 zł
+</div>
 
 </div>
 
@@ -359,15 +425,59 @@ Modelowanie i pielęgnacja.
 <h3>🔥 COMBO</h3>
 
 <p>
-Włosy + broda.
+Włosy + broda
 </p>
 
-<strong>130 zł</strong>
+<div class="price">
+130 zł
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>👑 SPA</h3>
+
+<p>
+Pełny relaks i pielęgnacja
+</p>
+
+<div class="price">
+190 zł
+</div>
 
 </div>
 
 
 </div>
+
+
+</section>
+
+
+
+
+
+
+<section class="about">
+
+
+<h2 class="title">
+DLACZEGO MY?
+</h2>
+
+
+<p>
+
+🔥 Doświadczenie<br>
+🔥 Profesjonalne podejście<br>
+🔥 Najwyższa jakość usług<br>
+🔥 Męski klimat<br>
+🔥 Perfekcyjny detal
+
+</p>
 
 
 </section>
@@ -379,30 +489,47 @@ Włosy + broda.
 
 <section id="opinie">
 
-<h2>OPINIE KLIENTÓW</h2>
+
+<h2 class="title">
+OPINIE
+</h2>
 
 
-<div class="opinie">
+<div class="cards">
 
 
-<div class="opinia">
-⭐⭐⭐⭐⭐
-<br><br>
+<div class="review">
+
+<div class="stars">
+★★★★★
+</div>
+
 "Mój barber od wielu lat. Profesjonalista."
+
 </div>
 
 
-<div class="opinia">
-⭐⭐⭐⭐⭐
-<br><br>
-"Super obsługa i idealne strzyżenie."
+
+<div class="review">
+
+<div class="stars">
+★★★★★
+</div>
+
+"Strzyżenie na najwyższym poziomie."
+
 </div>
 
 
-<div class="opinia">
-⭐⭐⭐⭐⭐
-<br><br>
-"Wysoka jakość i świetny efekt."
+
+<div class="review">
+
+<div class="stars">
+★★★★★
+</div>
+
+"Polecam każdemu."
+
 </div>
 
 
@@ -417,16 +544,18 @@ Włosy + broda.
 
 
 
-<section id="kontakt" class="kontakt">
+<section id="kontakt" class="contact">
 
 
-<h2>KONTAKT</h2>
+<h2 class="title">
+KONTAKT
+</h2>
 
 
-<div class="kontakt-box">
+<div class="contact-box">
 
 
-<div class="icon">
+<div class="location">
 📍
 </div>
 
@@ -437,8 +566,10 @@ BIG ZONE BARBER
 
 
 <p>
+
 Niccolo Paganiniego 10A<br>
 20-850 Lublin
+
 </p>
 
 
@@ -447,16 +578,23 @@ Niccolo Paganiniego 10A<br>
 </p>
 
 
+<a class="btn"
 
-<a class="button"
-
-href="https://www.google.com/maps/dir/?api=1&destination=Niccolo+Paganiniego+10A,+20-850+Lublin"
+href="https://www.google.com/maps/search/?api=1&query=Big+Zone+Barber+Niccolo+Paganiniego+10A+Lublin"
 
 target="_blank">
 
-🗺 ZOBACZ DOJAZD
+OTWÓRZ MAPĘ
 
 </a>
+
+
+
+<iframe class="map"
+
+src="https://maps.google.com/maps?q=Niccolo%20Paganiniego%2010A%20Lublin&t=&z=15&ie=UTF8&iwloc=&output=embed">
+
+</iframe>
 
 
 </div>
@@ -476,5 +614,4 @@ target="_blank">
 
 
 </body>
-
 </html>
