@@ -22,10 +22,12 @@ scroll-behavior:smooth;
 
 
 body{
+
 background:#050505;
 color:white;
-font-family:Poppins,Arial,sans-serif;
+font-family:Poppins,sans-serif;
 overflow-x:hidden;
+
 }
 
 
@@ -35,16 +37,13 @@ nav{
 
 position:fixed;
 top:0;
-left:0;
 width:100%;
-
+padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
 
-padding:20px 7%;
-
-background:rgba(0,0,0,.85);
+background:rgba(0,0,0,.9);
 backdrop-filter:blur(15px);
 
 z-index:100;
@@ -56,8 +55,8 @@ z-index:100;
 
 font-family:Cinzel;
 font-size:38px;
-font-weight:900;
 color:#d4af37;
+font-weight:900;
 
 }
 
@@ -77,7 +76,6 @@ text-align:center;
 color:white;
 text-decoration:none;
 margin-left:30px;
-font-weight:600;
 
 }
 
@@ -90,8 +88,8 @@ color:#d4af37;
 
 
 
-/* HERO */
 
+/* HERO */
 
 .hero{
 
@@ -99,51 +97,45 @@ min-height:100vh;
 
 display:flex;
 align-items:center;
-justify-content:space-between;
+justify-content:center;
 
-gap:50px;
+text-align:center;
 
-padding:120px 7% 60px;
+padding:120px 20px 60px;
 
-}
+background:
 
-
-.hero-left{
-
-width:50%;
+radial-gradient(circle at top,#d4af3730,transparent 35%),
+#050505;
 
 }
 
 
-.hero-left h1{
+.hero h1{
 
 font-family:Cinzel;
 font-size:90px;
-line-height:.95;
-
 color:#d4af37;
+line-height:1;
 
 }
 
 
-
-.hero-left h2{
+.hero h2{
 
 font-size:45px;
-
-margin-top:25px;
+margin-top:30px;
 
 }
 
 
+.hero p{
 
-.hero-left p{
+max-width:700px;
+margin:30px auto;
 
 font-size:20px;
-
 color:#ccc;
-
-margin:30px 0;
 
 }
 
@@ -152,12 +144,10 @@ margin:30px 0;
 .btn{
 
 display:inline-block;
-
-padding:17px 40px;
-
 background:#d4af37;
+color:black;
 
-color:#000;
+padding:18px 45px;
 
 border-radius:50px;
 
@@ -170,6 +160,7 @@ transition:.3s;
 }
 
 
+
 .btn:hover{
 
 transform:scale(1.08);
@@ -179,41 +170,12 @@ transform:scale(1.08);
 
 
 
-.hero-right{
-
-width:50%;
-
-}
-
-
-
-.hero-right img{
-
-width:100%;
-
-height:600px;
-
-object-fit:cover;
-
-border-radius:35px;
-
-border:3px solid #d4af37;
-
-box-shadow:0 0 60px #d4af3744;
-
-}
-
-
-
-
-
 /* SEKCJE */
 
 
 section{
 
-padding:90px 7%;
-
+padding:90px 8%;
 text-align:center;
 
 }
@@ -222,9 +184,7 @@ text-align:center;
 .title{
 
 font-family:Cinzel;
-
 font-size:50px;
-
 color:#d4af37;
 
 margin-bottom:50px;
@@ -234,12 +194,15 @@ margin-bottom:50px;
 
 
 
+/* KARTY */
+
+
 .grid{
 
 display:grid;
 
 grid-template-columns:
-repeat(auto-fit,minmax(260px,1fr));
+repeat(auto-fit,minmax(250px,1fr));
 
 gap:30px;
 
@@ -247,28 +210,30 @@ gap:30px;
 
 
 
-.card,
-.review,
-.contact-box{
+.card{
 
-background:#151515;
+background:
+linear-gradient(145deg,#181818,#090909);
 
-padding:35px;
+padding:40px;
 
 border-radius:25px;
 
 border:1px solid #333;
 
-transition:.3s;
+transition:.4s;
 
 }
 
 
+
 .card:hover{
 
-transform:translateY(-10px);
+transform:translateY(-12px);
 
 border-color:#d4af37;
+
+box-shadow:0 0 30px #d4af3733;
 
 }
 
@@ -292,9 +257,10 @@ margin:20px 0;
 }
 
 
+
 .price{
 
-font-size:35px;
+font-size:38px;
 
 font-weight:800;
 
@@ -303,8 +269,8 @@ font-weight:800;
 
 
 
-/* O NAS */
 
+/* O NAS */
 
 .about{
 
@@ -319,29 +285,11 @@ max-width:800px;
 
 margin:auto;
 
-font-size:20px;
+font-size:21px;
 
 line-height:2;
 
 color:#ddd;
-
-}
-
-
-
-
-/* GALERIA */
-
-
-.gallery img{
-
-width:100%;
-
-height:300px;
-
-object-fit:cover;
-
-border-radius:25px;
 
 }
 
@@ -376,18 +324,26 @@ background:#101010;
 }
 
 
-.pin{
-
-font-size:80px;
-
-}
-
-
 .contact-box{
 
 max-width:600px;
 
 margin:auto;
+
+background:#161616;
+
+padding:45px;
+
+border-radius:30px;
+
+border:1px solid #333;
+
+}
+
+
+.pin{
+
+font-size:80px;
 
 }
 
@@ -432,11 +388,10 @@ color:#777;
 
 
 
+/* TELEFON */
 
-/* TELEFONY */
 
-@media(max-width:900px){
-
+@media(max-width:800px){
 
 
 nav{
@@ -446,23 +401,18 @@ padding:18px 20px;
 }
 
 
-
 .logo{
 
-font-size:27px;
+font-size:28px;
 
 }
-
 
 
 .logo span{
 
 font-size:9px;
 
-letter-spacing:6px;
-
 }
-
 
 
 .menu{
@@ -472,50 +422,32 @@ display:none;
 }
 
 
-
 .hero{
 
-flex-direction:column;
-
-text-align:center;
-
-padding:120px 20px 50px;
+min-height:90vh;
 
 }
 
 
-
-.hero-left,
-.hero-right{
-
-width:100%;
-
-}
-
-
-
-.hero-left h1{
+.hero h1{
 
 font-size:50px;
 
 }
 
 
-
-.hero-left h2{
+.hero h2{
 
 font-size:30px;
 
 }
 
 
-
-.hero-left p{
+.hero p{
 
 font-size:16px;
 
 }
-
 
 
 .btn{
@@ -525,15 +457,6 @@ width:100%;
 max-width:330px;
 
 }
-
-
-
-.hero-right img{
-
-height:380px;
-
-}
-
 
 
 
@@ -561,30 +484,18 @@ grid-template-columns:1fr;
 
 
 
-.card,
-.review,
+.card{
+
+padding:30px 20px;
+
+}
+
+
 .contact-box{
 
-padding:25px 20px;
+padding:30px 20px;
 
 }
-
-
-
-.gallery img{
-
-height:250px;
-
-}
-
-
-
-.contact-box h3{
-
-font-size:25px;
-
-}
-
 
 
 }
@@ -594,23 +505,16 @@ font-size:25px;
 @media(max-width:380px){
 
 
-.hero-left h1{
+.hero h1{
 
 font-size:40px;
 
 }
 
 
-.hero-left h2{
+.hero h2{
 
 font-size:25px;
-
-}
-
-
-.hero-right img{
-
-height:300px;
 
 }
 
@@ -624,8 +528,8 @@ height:300px;
 </head>
 
 
-
 <body>
+
 
 
 <nav>
@@ -644,7 +548,7 @@ BIG ZONE
 
 <a href="#cennik">Cennik</a>
 
-<a href="#galeria">Galeria</a>
+<a href="#opinie">Opinie</a>
 
 <a href="#kontakt">Kontakt</a>
 
@@ -658,10 +562,10 @@ BIG ZONE
 
 
 
-<div class="hero">
+<section class="hero">
 
 
-<div class="hero-left">
+<div>
 
 
 <h1>
@@ -675,7 +579,6 @@ BARBER
 </h1>
 
 
-
 <h2>
 
 Twój styl.<br>
@@ -684,14 +587,12 @@ Twoja strefa.
 </h2>
 
 
-
 <p>
 
 Profesjonalny barber w Lublinie.
-Strzyżenie, broda i perfekcyjny wygląd.
+Męskie strzyżenie, broda i perfekcyjny wygląd.
 
 </p>
-
 
 
 <a class="btn" href="tel:534049124">
@@ -704,16 +605,7 @@ Strzyżenie, broda i perfekcyjny wygląd.
 </div>
 
 
-
-<div class="hero-right">
-
-<img src="img/salon.jpg" alt="Big Zone Barber">
-
-</div>
-
-
-
-</div>
+</section>
 
 
 
@@ -731,8 +623,8 @@ CENNIK
 </h2>
 
 
-<div class="grid">
 
+<div class="grid">
 
 
 <div class="card">
@@ -798,11 +690,11 @@ CENNIK
 </div>
 
 
-
 </div>
 
 
 </section>
+
 
 
 
@@ -822,14 +714,14 @@ O NAS
 
 <p>
 
-BIG ZONE BARBER to miejsce dla mężczyzn,
-którzy chcą wyglądać perfekcyjnie.
+BIG ZONE BARBER to miejsce stworzone dla mężczyzn,
+którzy cenią styl, jakość i profesjonalizm.
 
 <br><br>
 
-🔥 Profesjonalizm<br>
 🔥 Doświadczenie<br>
-🔥 Najwyższa jakość
+🔥 Indywidualne podejście<br>
+🔥 Najwyższa jakość usług
 
 </p>
 
@@ -841,38 +733,8 @@ którzy chcą wyglądać perfekcyjnie.
 
 
 
-<section id="galeria">
 
-
-<h2 class="title">
-
-GALERIA
-
-</h2>
-
-
-<div class="grid gallery">
-
-
-<img src="img/fryzura1.jpg">
-
-<img src="img/fryzura2.jpg">
-
-<img src="img/fryzura3.jpg">
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-<section>
+<section id="opinie">
 
 
 <h2 class="title">
@@ -882,10 +744,11 @@ OPINIE
 </h2>
 
 
+
 <div class="grid">
 
 
-<div class="review">
+<div class="card">
 
 <div class="stars">
 
@@ -893,12 +756,13 @@ OPINIE
 
 </div>
 
-"Mój barber od wielu lat. Profesjonalista."
+Mój barber od wielu lat. Profesjonalista.
 
 </div>
 
 
-<div class="review">
+
+<div class="card">
 
 <div class="stars">
 
@@ -906,12 +770,13 @@ OPINIE
 
 </div>
 
-"Strzyżenie na najwyższym poziomie."
+Strzyżenie na najwyższym poziomie.
 
 </div>
 
 
-<div class="review">
+
+<div class="card">
 
 <div class="stars">
 
@@ -919,7 +784,7 @@ OPINIE
 
 </div>
 
-"Polecam każdemu."
+Polecam każdemu.
 
 </div>
 
